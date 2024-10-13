@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git 'https://github.com/RAHAMSHAIK007/dockernewproject.git'
+                git 'https://github.com/VOID-121/dockernewproject.git'
             }
         }
         stage('build') {
@@ -21,7 +21,7 @@ pipeline {
         }
         stage('push') {
             steps {
-                sh 'docker login -u rahamshaik -p Raham@#123'
+                sh 'docker login -u yourusername -p yourpassword'
                 sh 'docker push $repo'
             }
         }
@@ -37,12 +37,12 @@ pipeline {
     stages {
         stage('check') {
             steps {
-                git 'https://github.com/RAHAMSHAIK007/dockernewproject.git'
+                git 'https://github.com/VOID-121/dockernewproject.git'
             }
         }
         stage('stack') {
             steps {
-                sh 'docker stack deploy -c docker-compose.yml courses'
+                sh 'docker stack deploy -c docker-compose.yml checkoutform'
             }
         }
     }
